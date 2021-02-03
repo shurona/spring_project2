@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+	<context:component-scan base-package="com.springbook.biz"></context:component-scan>
+	
+
+	<!-- 
+	
+	<context:component-scan base-package="polymorphism"></context:component-scan>
+	<bean class = "polymorphism.SonySpeaker"></bean>
+	
+	<context:component-scan base-package="com.springbook.injection"></context:component-scan>
+	
+	
+	<bean id = "tv" class = "polymorphism.SamsungTV" init-method="initMethod" destroy-method="destroyMethod"
+			p:speaker-ref="sony" p:price="27000000">
+	</bean>
+	
+	<bean id = "sony" class="polymorphism.SonySpeaker"></bean>
+	<bean id = "apple" class = "polymorphism.AppleSpeaker"></bean>
+	
+	<bean id = "lg" class = "polymorphism.LgTV"/> 
+
+	<bean id = "collectionBean" class = "com.springbook.injection.CollectionBean">
+		<property  name="addressList">
+			<list>
+				<value>서울시 강남구 역삼동</value>
+				<value>서울시 성동구 행당동</value>
+			</list>
+		</property>
+	</bean>
+	 -->
+</beans>
+<!-- 주석 import resource = ~~ -->
