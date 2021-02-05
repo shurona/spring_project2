@@ -7,39 +7,44 @@ import org.springframework.stereotype.Service;
 
 import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
+import com.springbook.biz.common.Log4jAdvice;
+import com.springbook.biz.common.LogAdvice;
 
 @Service("boardService")
 public class BoardServiceImpl implements BoardService {
 
 	@Autowired
-	private BoardDAO boardDAO;
+	private BoardDAOSpring boardDAO;
+	
+//	public BoardServiceImpl() {
+//		log = new Log4jAdvice();
+//	}
+//	
 	@Override
 	public void insertBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
 		boardDAO.insertBoard(vo);
 	}
 
 	@Override
 	public void updateBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
 		boardDAO.insertBoard(vo);
 	}
 
 	@Override
 	public void deleteBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
 		boardDAO.updateBoard(vo);
 	}
 
 	@Override
 	public BoardVO getBoard(BoardVO vo) {
-		// TODO Auto-generated method stub
 		return boardDAO.getBoard(vo);
 	}
 
 	@Override
 	public List<BoardVO> getBoardList(BoardVO vo) {
-		// TODO Auto-generated method stub
+		if(vo.getSeq() == 1) {
+			throw new IllegalArgumentException("1번 글은 읽을 수 없습니다.");
+		}
 		return boardDAO.getBoardList(vo);
 	}
 
